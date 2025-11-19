@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Funkelnder Browser</title>
+
+  <!-- iOS/Safari Freundlichkeit -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <!-- CSS einbinden -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <section class="card" role="region" aria-label="Funkelnder Browser">
+      <div class="logo">
+        <!-- Inline SVG Funkel-Icon -->
+        <svg class="sparkle" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#b485ff"/>
+              <stop offset="100%" stop-color="#6d32c7"/>
+            </linearGradient>
+          </defs>
+          <path fill="url(#grad)" d="M12 2l1.8 4.7L18 8.5l-4.2 1.1L12 14l-1.8-4.4L6 8.5l4.2-1.8L12 2z"/>
+        </svg>
+        Funkelnder
+      </div>
+      <p class="sub">Gib deinen Suchbegriff ein und wähle die Suchmaschine. Es werden keine Inhalte kopiert – du wirst direkt weitergeleitet.</p>
+
+      <form class="search" id="searchForm" autocomplete="off">
+        <input id="q" type="text" inputmode="search" placeholder="Suchbegriff eingeben …" aria-label="Suchbegriff" required />
+        <select id="engine" aria-label="Suchmaschine wählen">
+          <option value="duckduckgo">DuckDuckGo (Privatsphäre)</option>
+          <option value="bing">Bing</option>
+          <option value="google">Google</option>
+          <option value="youtube">YouTube</option>
+          <option value="wikipedia">Wikipedia (Deutsch)</option>
+        </select>
+        <button type="submit" aria-label="Suchen">Suchen</button>
+      </form>
+
+      <noscript>
+        <div class="links" aria-live="polite">
+          JavaScript ist deaktiviert. Du kannst trotzdem suchen:
+          <br/>
+          <a href="https://duckduckgo.com/">DuckDuckGo</a> ·
+          <a href="https://www.bing.com/">Bing</a> ·
+          <a href="https://www.google.com/">Google</a> ·
+          <a href="https://www.youtube.com/">YouTube</a> ·
+          <a href="https://de.wikipedia.org/">Wikipedia</a>
+        </div>
+      </noscript>
+
+      <div class="footer">
+        Diese Seite zeigt keine eigenen Ergebnisse, sondern leitet dich rechtskonform zur gewählten Suchmaschine weiter.
+      </div>
+    </section>
+  </main>
+
+  <!-- JS einbinden -->
+  <script src="script.js"></script>
+</body>
+</html>
